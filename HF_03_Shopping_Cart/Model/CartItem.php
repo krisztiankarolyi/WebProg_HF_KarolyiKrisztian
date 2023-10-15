@@ -1,5 +1,7 @@
 <?php
 
+namespace Model;
+
 class CartItem
 {
     private Product $product;
@@ -38,8 +40,8 @@ class CartItem
     public function increaseQuantity()
     {
         $q = $this->getQuantity();
-        if($q < $this->getProduct()->getAvailableQuantity()){
-           $this->setQuantity($q + 1);
+        if ($q < $this->getProduct()->getAvailableQuantity()) {
+            $this->setQuantity($q + 1);
 
         }
     }
@@ -47,8 +49,8 @@ class CartItem
     public function decreaseQuantity()
     {
         $q = $this->getQuantity();
-        if($q > 1){
-         $this->setQuantity($q - 1);
+        if ($q > 1) {
+            $this->setQuantity($q - 1);
         }
     }
 }

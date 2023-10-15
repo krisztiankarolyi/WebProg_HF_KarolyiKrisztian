@@ -1,8 +1,7 @@
 <?php
+namespace Model;
 
-
-class Product
-{
+class Product {
     private int $id;
     private string $title;
     private float $price;

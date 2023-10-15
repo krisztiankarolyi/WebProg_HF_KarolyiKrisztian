@@ -1,4 +1,7 @@
 <?php
+
+namespace Model;
+
 class Cart
 {
     /**
@@ -23,6 +26,7 @@ class Cart
     {
         $this->items = [];
     }
+
     /**
      * Add Product $product into cart. If product already exists inside cart
      * it must update quantity.
@@ -65,7 +69,7 @@ class Cart
     {
         foreach ($this->items as $index => $cartItem) {
             if ($cartItem->getProduct() === $product) {
-                if($cartItem->getQuantity() > 1)
+                if ($cartItem->getQuantity() > 1)
                     unset($this->items[$index]);
                 break;
             }
@@ -79,10 +83,10 @@ class Cart
     public function getTotalQuantity(): int
     {
         $totalItems = 0;
-        foreach ($this->getItems() as $item){
+        foreach ($this->getItems() as $item) {
             $totalItems += $item->getQuantity();
         }
-        return  $totalItems;
+        return $totalItems;
     }
 
     /**
@@ -92,9 +96,9 @@ class Cart
     public function getTotalSum(): float
     {
         $sum = 0;
-        foreach ($this->getItems() as $item){
+        foreach ($this->getItems() as $item) {
             $sum += $item->getProduct()->getPrice() * $item->getQuantity();
         }
-        return  $sum;
+        return $sum;
     }
 }
