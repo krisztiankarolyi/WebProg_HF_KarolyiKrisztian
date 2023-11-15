@@ -1,0 +1,2 @@
+CREATE TABLE `egyetem`.`users` (`id` INT NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO `users` (`id`, `username`, `password`) VALUES (NULL, 'user1', '$2y$10$WdPibNiAmdrN3/I7M5kuV.XxbjgnrFDd7G249BVdQSAz7zywEZSxq');
